@@ -8,7 +8,17 @@ const postSchema = new mongoose.Schema({
     },
     body:{
         type: String,
-        minlength: 10
+        minlength: 10,
+        required: true
+    },
+    category: { 
+        type: String,
+        required: true,
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'user',
     }
 }, {timestamps: true})
 
