@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Post = require('./postSchema')
+const restricted = require('../middleware/restricted-middleware.js')
 
 //retrieves all posts
 router.get('/posts', async (req, res) => {
@@ -24,7 +25,7 @@ router.get('/post/:id', async (req, res) => {
 })
 
 //creates posts 
-router.post('/posts', async (req, res) => {
+router.post('/posts', restricted, async (req, res) => {
     const createdPost = req.body
     try{
         const post = await Post.create(createdPost)

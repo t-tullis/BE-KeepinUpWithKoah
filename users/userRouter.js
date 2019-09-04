@@ -40,7 +40,6 @@ router.post('/user/login', async (req, res) => {
   
     try{
         const user = await Users.findOne({"email": email})
-        
         console.log(user)
         if (user && bcrypt.compareSync(password, user.password)) {
           //generates the webtoken for the user.
