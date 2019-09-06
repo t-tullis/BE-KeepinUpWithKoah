@@ -45,7 +45,7 @@ router.post('/user/login', async (req, res) => {
           //generates the webtoken for the user.
           const token = generateToken(user);
           res.status(200).json({
-            message: `Welcome ${user.firstName}!`,
+            message: `Welcome back ${user.firstName}!`,
             token,
           });
         } else {
