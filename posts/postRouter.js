@@ -5,6 +5,7 @@ const restricted = require('../middleware/restricted-middleware.js')
 //retrieves all posts
 router.get('/posts', async (req, res) => {
     const posts = await Post.find({})
+    .sort({createdAt: -1})
     .lean()
     .exec()
     res.status(200).json(posts)

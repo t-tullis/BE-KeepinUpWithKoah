@@ -15,11 +15,15 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'user',
+    previewImg:{
+        type: String,
+        required: true
     }
+    // user: {
+    //     type: mongoose.Schema.Types.ObjectId,
+    //     required: true,
+    //     ref: 'user',
+    // }
 }, {timestamps: true})
 
 module.exports = mongoose.model('post', postSchema)
