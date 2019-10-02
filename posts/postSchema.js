@@ -18,7 +18,13 @@ const postSchema = new mongoose.Schema({
     previewImg:{
         type: String
     },
-    postImages: {
+    postImage1: {
+        type: String
+    },
+    postImage2: {
+        type: String
+    },
+    postImage3: {
         type: String
     }
     // user: {
