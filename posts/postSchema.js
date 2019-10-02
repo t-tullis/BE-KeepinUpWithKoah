@@ -17,6 +17,9 @@ const postSchema = new mongoose.Schema({
     },
     previewImg:{
         type: String
+    },
+    postImages: {
+        type: String
     }
     // user: {
     //     type: mongoose.Schema.Types.ObjectId,
